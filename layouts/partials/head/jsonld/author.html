@@ -3,6 +3,8 @@
 {{- with $author -}}
   {{- $data = dict
     "@type" "Person"
+	"name" .name
+	"email" .email
   -}}
   {{- with .name -}}
     {{- $data = merge $data ( dict "name" . ) -}}
